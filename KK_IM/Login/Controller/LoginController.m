@@ -1,5 +1,5 @@
 //
-//  LoginViewController.m
+//  LoginController.m
 //  KK_IM
 //
 //  Created by Admin on 2021/6/25.
@@ -9,7 +9,7 @@
 #import "LoginView.h"
 
 #import "RegisterViewController.h"
-#import "MainPageViewController.h"
+
 #import "UserInfoModel.h"
 #import "infoArchive.h"
 #import "Masonry.h"
@@ -92,8 +92,8 @@
             
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 //跳转至注册页面
-                AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-                [appDelegate.navigationController pushViewController:[[RegisterViewController alloc]init] animated:YES];
+                
+                [self presentViewController:[RegisterViewController new] animated:YES completion:nil];
                 //[self performSegueWithIdentifier:@"register" sender:nil];
             }];
             [alertController addAction:okAction];

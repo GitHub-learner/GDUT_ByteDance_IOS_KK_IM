@@ -10,9 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RegisterView : UIView
+
 @property (strong, nonatomic)  UITextField *usernameField;
 @property (strong, nonatomic)  UITextField *passwordField;
 @property (strong, nonatomic)  UIButton *registerButton;
+@property (strong, nonatomic)  UITextField *nickNameField;
 
 @end
 
