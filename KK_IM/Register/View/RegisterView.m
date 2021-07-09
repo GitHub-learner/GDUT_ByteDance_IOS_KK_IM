@@ -53,10 +53,8 @@
     self.titleLable = [[UILabel alloc] init];
     [self.backView addSubview:self.titleLable];
     self.titleLable.textColor = [UIColor systemBlueColor];
-
-
     self.titleLable.font = [UIFont systemFontOfSize:80];
-    self.titleLable.text = @"注册";
+    self.titleLable.text = @"Register";
     self.titleLable.textAlignment = NSTextAlignmentCenter;
 
     [self.titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -92,6 +90,35 @@
         make.top.equalTo(self.titleLable.mas_bottom).offset(40);
         make.height.equalTo(@55);
     }];
+    
+    self.nickNameField = [[UITextField alloc]init];
+    self.nickNameField.backgroundColor = [UIColor whiteColor];
+    self.nickNameField.delegate = self;
+    self.nickNameField.borderStyle = UITextBorderStyleNone;
+    self.nickNameField.placeholder = @"昵称";
+    self.nickNameField.font = [UIFont systemFontOfSize:17];
+    self.nickNameField.returnKeyType = UIReturnKeyJoin;
+    // 密码🔐安全样式
+    self.nickNameField.secureTextEntry = YES;
+    self.nickNameField.clearsOnBeginEditing = NO;
+
+    self.nickNameField.rightViewMode = UITextFieldViewModeAlways;
+    self.nickNameField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 18, 10)];
+    self.nickNameField.leftViewMode = UITextFieldViewModeAlways;
+    self.nickNameField.layer.cornerRadius = 25;
+    self.nickNameField.layer.borderWidth = 1;
+    self.nickNameField.layer.borderColor = [UIColor lightGrayColor].CGColor;
+
+    [self.backView addSubview:self.nickNameField];
+    [self.nickNameField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.backView).offset(30);
+        make.right.equalTo(self.backView).offset(-30);
+        make.top.equalTo(self.usernameField.mas_bottom).offset(20);
+        make.height.equalTo(@55);
+    }];
+    
+    
+    
     self.passwordField = [[UITextField alloc] init];
     self.passwordField.backgroundColor = [UIColor whiteColor];
     self.passwordField.delegate = self;
@@ -102,7 +129,6 @@
     // 密码🔐安全样式
     self.passwordField.secureTextEntry = YES;
     self.passwordField.clearsOnBeginEditing = NO;
-
     self.passwordField.rightViewMode = UITextFieldViewModeAlways;
     self.passwordField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 18, 10)];
     self.passwordField.leftViewMode = UITextFieldViewModeAlways;
@@ -114,7 +140,7 @@
     [self.passwordField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.backView).offset(30);
         make.right.equalTo(self.backView).offset(-30);
-        make.top.equalTo(self.usernameField.mas_bottom).offset(20);
+        make.top.equalTo(self.nickNameField.mas_bottom).offset(20);
         make.height.equalTo(@55);
     }];
 

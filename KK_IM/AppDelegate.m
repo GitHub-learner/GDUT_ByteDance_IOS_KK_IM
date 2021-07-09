@@ -26,8 +26,10 @@
     
     // 设置程序的默认window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:[[LoginController alloc]init]];
-    self.window.rootViewController = self.navigationController;
+    
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[LoginController new]];
+    self.window.rootViewController = navigationController;
     // 显示window
     [self.window makeKeyAndVisible];
     return YES;
