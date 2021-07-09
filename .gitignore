@@ -26,13 +26,7 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
-### Xcode Patch ###
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddat
-!*/xcuserdata/admin.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlista/
-!*.xcworkspace/contents.xcworkspacedata
-/*.gcno
+
 
 
 # End of https://www.gitignore.io/api/xcode
