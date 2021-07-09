@@ -78,7 +78,6 @@
                            @"userId": userId,
                            @"password": passWord
     };
-    
     [self sendBody:body finishBlock:finish];
 }
 
@@ -88,8 +87,6 @@
     [self sendBody:body finishBlock:finish];
     
 }
-
-
 
 @end
 
