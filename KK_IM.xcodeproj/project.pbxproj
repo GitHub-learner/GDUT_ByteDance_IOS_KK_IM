@@ -1860,6 +1860,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		848CD6382697F84200B2A4A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84ECA263268C6F2C00A36EF3 /* UserInfoModel.m */,
+				84ECA264268C6F2C00A36EF3 /* UserInfoModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84ECA25A268C6F2C00A36EF3 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -1881,8 +1890,6 @@
 		84ECA262268C6F2C00A36EF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84ECA263268C6F2C00A36EF3 /* UserInfoModel.m */,
-				84ECA264268C6F2C00A36EF3 /* UserInfoModel.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";

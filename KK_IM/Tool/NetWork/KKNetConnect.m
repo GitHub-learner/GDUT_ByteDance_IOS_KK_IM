@@ -31,18 +31,18 @@
     return _manager;
 }
 
--(instancetype) initWithUrl:(NSString*)url {
-    if(self = [super init]){
-        self.url = url;
-    }
-    
-    return self;
-}
+//-(instancetype) initWithUrl:(NSString*)url {
+//    if(self = [super init]){
+//        self.url = url;
+//    }
+//    return self;
+//}
 
 -(void) sendBody:(NSDictionary*)body finishBlock:( void (^) (NSDictionary*))finish{
-//    __block NSDictionary* res ;
+    //异步请求
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self.manager POST:self.url parameters:body progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            //回调函数，在主线程中执行，用于ui更新的数据.
             dispatch_async(dispatch_get_main_queue(), ^{
                 finish(responseObject);
             });
@@ -59,11 +59,13 @@
 }
 
 - (void)senduserAccountCheckIfExists:(NSString *)account finishBlock:(void (^)(NSDictionary * _Nonnull))finish{
+    [self changURL:@"https://qczgqv.fn.thelarkcloud.com/ifUserExist"];
     NSDictionary* body = @{@"userId": account};
     [self sendBody:body finishBlock:finish];
 }
 
 - (void)senduserAccount:(NSString *)account andPassword:(NSString *)passWord finishBlock:(void (^)(NSDictionary * _Nonnull))finish{
+    [self changURL:@"https://qczgqv.fn.thelarkcloud.com/MatchUserPassword"];
     NSDictionary* body = @{@"userId": account,
                            @"password": passWord
     };
@@ -71,29 +73,20 @@
 }
 
 -(void) senduserNickName:(NSString*)nickName andUserId:(NSString*)userId andPassword:(NSString*)passWord finishBlock:(void (^)(NSDictionary * _Nonnull))finish{
+    [self changURL:@"https://qczgqv.fn.thelarkcloud.com/AddUser"];
     NSDictionary* body = @{@"nickName": nickName,
                            @"userId": userId,
                            @"password": passWord
     };
-    
     [self sendBody:body finishBlock:finish];
 }
 
 - (void)getUserInfoForUserId:(NSString *)userId finishBlock:(void (^)(NSDictionary * _Nonnull))finish{
+    [self changURL:@"https://qczgqv.fn.thelarkcloud.com/getUserInfo"];
     NSDictionary* body = @{@"userId": userId};
     [self sendBody:body finishBlock:finish];
     
 }
-
-//- (void)sendFriendId:(NSString *)friendAccount finishBlock:(void (^)(NSDictionary * _Nonnull))finish{
-//
-//
-//
-//    NSDictionary* body = @{@"userId": friendAccount};
-//
-//}
-
-
 
 @end
 
