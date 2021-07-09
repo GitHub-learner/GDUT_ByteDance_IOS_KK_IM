@@ -17,12 +17,25 @@
 
 @implementation RegisterViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.registerModel = [RegisterModel new];   //实例化model
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
     self.registerView = [[RegisterView alloc]init];
     
+    self.registerView.usernameField.text = self.registerModel.userId;
+    NSLog(@"%@", self.registerView.usernameField.text);
     
     [self.view addSubview:self.registerView];
     [self.registerView mas_makeConstraints:^(MASConstraintMaker *make) {

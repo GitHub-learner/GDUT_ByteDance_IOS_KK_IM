@@ -97,11 +97,8 @@
     self.nickNameField.borderStyle = UITextBorderStyleNone;
     self.nickNameField.placeholder = @"昵称";
     self.nickNameField.font = [UIFont systemFontOfSize:17];
-    self.nickNameField.returnKeyType = UIReturnKeyJoin;
-    // 密码🔐安全样式
-    self.nickNameField.secureTextEntry = YES;
+    self.nickNameField.returnKeyType = UIReturnKeyNext;
     self.nickNameField.clearsOnBeginEditing = NO;
-
     self.nickNameField.rightViewMode = UITextFieldViewModeAlways;
     self.nickNameField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 18, 10)];
     self.nickNameField.leftViewMode = UITextFieldViewModeAlways;
@@ -166,11 +163,14 @@
 {
     if([self.usernameField isFirstResponder]){
         [self.usernameField resignFirstResponder];
+        [self.nickNameField becomeFirstResponder];
+    }
+    else if([self.nickNameField isFirstResponder]){
         [self.passwordField becomeFirstResponder];
     }
     else if([self.passwordField isFirstResponder]){
         [self.passwordField resignFirstResponder];
-        //[self.loginButton becomeFirstResponder];
+        
     }
     return YES;
 }

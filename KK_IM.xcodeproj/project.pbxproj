@@ -444,6 +444,7 @@
 		8458656B268B6BD9000E7D08 /* icon-tab我@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84586559268B6BD9000E7D08 /* icon-tab我@2x.png */; };
 		8458656C268B6BD9000E7D08 /* icon-tab我unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8458655A268B6BD9000E7D08 /* icon-tab我unselected@2x.png */; };
 		848CD6322697F73000B2A4A2 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848CD6312697F73000B2A4A2 /* HomeView.m */; };
+		848CD6BE26983AED00B2A4A2 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848CD6BD26983AED00B2A4A2 /* RegisterModel.m */; };
 		84ECA265268C6F2C00A36EF3 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA25C268C6F2C00A36EF3 /* LoginController.m */; };
 		84ECA267268C6F2C00A36EF3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA25E268C6F2C00A36EF3 /* RegisterViewController.m */; };
 		84ECA268268C6F2C00A36EF3 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA263268C6F2C00A36EF3 /* UserInfoModel.m */; };
@@ -998,6 +999,8 @@
 		8458655A268B6BD9000E7D08 /* icon-tab我unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-tab我unselected@2x.png"; sourceTree = "<group>"; };
 		848CD6302697F73000B2A4A2 /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
 		848CD6312697F73000B2A4A2 /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
+		848CD6BC26983AED00B2A4A2 /* RegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
+		848CD6BD26983AED00B2A4A2 /* RegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
 		84ECA25C268C6F2C00A36EF3 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		84ECA25E268C6F2C00A36EF3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		84ECA260268C6F2C00A36EF3 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
@@ -1860,9 +1863,19 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		848CD6BB26983A8900B2A4A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				848CD6BC26983AED00B2A4A2 /* RegisterModel.h */,
+				848CD6BD26983AED00B2A4A2 /* RegisterModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84ECA25A268C6F2C00A36EF3 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				848CD6BB26983A8900B2A4A2 /* Model */,
 				84ECA275268C706900A36EF3 /* View */,
 				84ECA25B268C6F2C00A36EF3 /* Controller */,
 			);
@@ -2496,6 +2509,7 @@
 				8458635D268B6209000E7D08 /* KTextView.m in Sources */,
 				845861C3268B61C7000E7D08 /* KVideoPlayView.m in Sources */,
 				8458634F268B6209000E7D08 /* KTextBackedString.m in Sources */,
+				848CD6BE26983AED00B2A4A2 /* RegisterModel.m in Sources */,
 				8458653C268B6402000E7D08 /* MainTabBarController.m in Sources */,
 				8458635A268B6209000E7D08 /* KInputBoxViewCtrl.m in Sources */,
 				84586539268B63E6000E7D08 /* UIView+KExtension.m in Sources */,

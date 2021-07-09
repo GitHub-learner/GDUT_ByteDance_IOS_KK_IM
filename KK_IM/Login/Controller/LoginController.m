@@ -7,7 +7,7 @@
 
 #import "LoginController.h"
 #import "LoginView.h"
-
+#import "RegisterModel.h"
 #import "RegisterViewController.h"
 
 #import "UserInfoModel.h"
@@ -87,14 +87,16 @@
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"该账号未注册，你要注册该账号吗？" preferredStyle:UIAlertControllerStyleAlert];
             
             
-            
-            
-            
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                //跳转至注册页面
                 
-                [self presentViewController:[RegisterViewController new] animated:YES completion:nil];
-                //[self performSegueWithIdentifier:@"register" sender:nil];
+               
+                //跳转至注册页面
+                RegisterViewController *registerController = [RegisterViewController new];
+                registerController.registerModel.userId = self.loginView.usernameField.text;
+                NSLog(@"%@", registerController.registerModel.userId);
+                
+                [self presentViewController:registerController animated:YES completion:nil];
+              //[self.navigationController pushViewController:[RegisterViewController new] animated:YES];
             }];
             [alertController addAction:okAction];
             
