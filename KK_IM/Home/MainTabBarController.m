@@ -8,7 +8,7 @@
 #import "MainTabBarController.h"
 
 #import "Masonry.h"
-#import "HomeView.h"
+
 #import "ConversationsController.h"
 #import "ContactsController.h"
 #import "MineController.h"
