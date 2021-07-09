@@ -1,5 +1,5 @@
 //
-//  LoginViewController.m
+//  LoginController.m
 //  KK_IM
 //
 //  Created by Admin on 2021/6/25.
@@ -9,7 +9,9 @@
 #import "LoginView.h"
 
 #import "RegisterViewController.h"
-#import "MainPageViewController.h"
+
+//#import "MainPageViewController.h"
+
 #import "UserInfoModel.h"
 #import "infoArchive.h"
 #import "Masonry.h"
@@ -61,7 +63,8 @@
 
 - (void) login {
     //创建链接，指定相应URL
-    KKNetConnect* conn = [[KKNetConnect alloc]initWithUrl:@"https://qczgqv.fn.thelarkcloud.com/ifUserExist"];
+//    KKNetConnect* conn = [[KKNetConnect alloc]initWithUrl:@"https://qczgqv.fn.thelarkcloud.com/ifUserExist"];
+    KKNetConnect* conn = [[KKNetConnect alloc]init];
     //异步发送请求，成功后返回主线程执行finish函数
     [conn senduserAccountCheckIfExists:self.loginView.usernameField.text finishBlock:^(NSDictionary * _Nonnull res) {
         
@@ -75,7 +78,7 @@
     //存在用户
     if ([res[@"result"]  isEqual:  @(YES)]){
         //去验证密码
-        [conn changURL:@"https://qczgqv.fn.thelarkcloud.com/MatchUserPassword"];
+//        [conn changURL:@"https://qczgqv.fn.thelarkcloud.com/MatchUserPassword"];
         //发送请求
         [conn senduserAccount:self.loginView.usernameField.text andPassword:self.loginView.passwordField.text finishBlock:^(NSDictionary * _Nonnull loginRes) {
             [self verifySuccess:loginRes andConnect:conn];
@@ -92,8 +95,8 @@
             
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 //跳转至注册页面
-                AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-                [appDelegate.navigationController pushViewController:[[RegisterViewController alloc]init] animated:YES];
+                
+                [self presentViewController:[RegisterViewController new] animated:YES completion:nil];
                 //[self performSegueWithIdentifier:@"register" sender:nil];
             }];
             [alertController addAction:okAction];
@@ -118,7 +121,7 @@
         [appDelegate.navigationController pushViewController:mainTabBarController animated:YES];
         
         //进入主页面之前，获取个人信息并归档。
-        [conn changURL:@"https://qczgqv.fn.thelarkcloud.com/getUserInfo"];
+//        [conn changURL:@"https://qczgqv.fn.thelarkcloud.com/getUserInfo"];
         [conn getUserInfoForUserId:self.loginView.usernameField.text finishBlock:^(NSDictionary * _Nonnull userInfo) {
             //下面是进行归档
 
@@ -136,14 +139,6 @@
     }
 }
 
-//// 将值通过segue传递
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.identifier isEqualToString: @"register"]) {
-//        RegisterViewController *theVc = segue.destinationViewController;
-//        theVc.username = self.loginView.usernameField.text;
-//        theVc.password = self.loginView.passwordField.text;
-//    }
-//}
 
 - (void)viewWillAppear:(BOOL)animated
 {

@@ -395,7 +395,6 @@
 		845864BF268B622D000E7D08 /* icon_message_sending@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845864A6268B622D000E7D08 /* icon_message_sending@3x.png */; };
 		845864D3268B6238000E7D08 /* KPhotoPreviewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845864C3268B6238000E7D08 /* KPhotoPreviewModel.m */; };
 		845864D4268B6238000E7D08 /* conversationList2 in Resources */ = {isa = PBXBuildFile; fileRef = 845864C4268B6238000E7D08 /* conversationList2 */; };
-		845864D6268B6238000E7D08 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845864C6268B6238000E7D08 /* LoginModel.m */; };
 		845864D7268B6238000E7D08 /* conversationList in Resources */ = {isa = PBXBuildFile; fileRef = 845864C7268B6238000E7D08 /* conversationList */; };
 		845864D8268B6238000E7D08 /* KMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845864C9268B6238000E7D08 /* KMessageModel.m */; };
 		845864D9268B6238000E7D08 /* KChatMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 845864CB268B6238000E7D08 /* KChatMessageHelper.m */; };
@@ -446,7 +445,6 @@
 		8458656C268B6BD9000E7D08 /* icon-tab我unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8458655A268B6BD9000E7D08 /* icon-tab我unselected@2x.png */; };
 		848CD6322697F73000B2A4A2 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848CD6312697F73000B2A4A2 /* HomeView.m */; };
 		84ECA265268C6F2C00A36EF3 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA25C268C6F2C00A36EF3 /* LoginController.m */; };
-		84ECA266268C6F2C00A36EF3 /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA25D268C6F2C00A36EF3 /* MainPageViewController.m */; };
 		84ECA267268C6F2C00A36EF3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA25E268C6F2C00A36EF3 /* RegisterViewController.m */; };
 		84ECA268268C6F2C00A36EF3 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA263268C6F2C00A36EF3 /* UserInfoModel.m */; };
 		84ECA272268C705A00A36EF3 /* KKNetConnect+messege.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA26C268C705A00A36EF3 /* KKNetConnect+messege.m */; };
@@ -919,13 +917,11 @@
 		845864C2268B6238000E7D08 /* KChatMessageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KChatMessageHelper.h; sourceTree = "<group>"; };
 		845864C3268B6238000E7D08 /* KPhotoPreviewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPhotoPreviewModel.m; sourceTree = "<group>"; };
 		845864C4268B6238000E7D08 /* conversationList2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = conversationList2; sourceTree = "<group>"; };
-		845864C6268B6238000E7D08 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		845864C7268B6238000E7D08 /* conversationList */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = conversationList; sourceTree = "<group>"; };
 		845864C8268B6238000E7D08 /* KConversationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KConversationModel.h; sourceTree = "<group>"; };
 		845864C9268B6238000E7D08 /* KMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMessageModel.m; sourceTree = "<group>"; };
 		845864CA268B6238000E7D08 /* KPhotoPreviewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPhotoPreviewModel.h; sourceTree = "<group>"; };
 		845864CB268B6238000E7D08 /* KChatMessageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KChatMessageHelper.m; sourceTree = "<group>"; };
-		845864CD268B6238000E7D08 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		845864CF268B6238000E7D08 /* KConversationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KConversationModel.m; sourceTree = "<group>"; };
 		845864D0268B6238000E7D08 /* KMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMessageModel.h; sourceTree = "<group>"; };
 		845864D1268B6238000E7D08 /* messageList101824_143701 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = messageList101824_143701; sourceTree = "<group>"; };
@@ -1003,9 +999,7 @@
 		848CD6302697F73000B2A4A2 /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
 		848CD6312697F73000B2A4A2 /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
 		84ECA25C268C6F2C00A36EF3 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
-		84ECA25D268C6F2C00A36EF3 /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
 		84ECA25E268C6F2C00A36EF3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		84ECA25F268C6F2C00A36EF3 /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
 		84ECA260268C6F2C00A36EF3 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		84ECA261268C6F2C00A36EF3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		84ECA263268C6F2C00A36EF3 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
@@ -1841,7 +1835,7 @@
 		848CD6352697F81C00B2A4A2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				848CD6382697F84200B2A4A2 /* Model */,
+				84ECA262268C6F2C00A36EF3 /* Model */,
 				848CD6362697F82900B2A4A2 /* View */,
 				848CD6372697F83700B2A4A2 /* Controller */,
 			);
@@ -1866,21 +1860,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+
 		848CD6382697F84200B2A4A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				845864C6268B6238000E7D08 /* LoginModel.m */,
-				845864CD268B6238000E7D08 /* LoginModel.h */,
+				84ECA263268C6F2C00A36EF3 /* UserInfoModel.m */,
+				84ECA264268C6F2C00A36EF3 /* UserInfoModel.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
+
 		84ECA25A268C6F2C00A36EF3 /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				84ECA275268C706900A36EF3 /* View */,
 				84ECA25B268C6F2C00A36EF3 /* Controller */,
-				84ECA262268C6F2C00A36EF3 /* Model */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1888,10 +1883,8 @@
 		84ECA25B268C6F2C00A36EF3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				84ECA25D268C6F2C00A36EF3 /* MainPageViewController.m */,
 				84ECA261268C6F2C00A36EF3 /* RegisterViewController.h */,
 				84ECA25E268C6F2C00A36EF3 /* RegisterViewController.m */,
-				84ECA25F268C6F2C00A36EF3 /* MainPageViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1899,8 +1892,6 @@
 		84ECA262268C6F2C00A36EF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84ECA263268C6F2C00A36EF3 /* UserInfoModel.m */,
-				84ECA264268C6F2C00A36EF3 /* UserInfoModel.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2510,7 +2501,6 @@
 				84586351268B6209000E7D08 /* KInputBoxMoreView.m in Sources */,
 				84ECA272268C705A00A36EF3 /* KKNetConnect+messege.m in Sources */,
 				845861C2268B61C7000E7D08 /* TAAbstractDotView.m in Sources */,
-				845864D6268B6238000E7D08 /* LoginModel.m in Sources */,
 				845861EF268B61FA000E7D08 /* UIImage+Color.m in Sources */,
 				8458635D268B6209000E7D08 /* KTextView.m in Sources */,
 				845861C3268B61C7000E7D08 /* KVideoPlayView.m in Sources */,
@@ -2546,7 +2536,6 @@
 				845861E4268B61FA000E7D08 /* NSDate+KCategory.m in Sources */,
 				8454FF7E268333F4003229E9 /* SceneDelegate.m in Sources */,
 				8458651D268B6265000E7D08 /* HomeController.m in Sources */,
-				84ECA266268C6F2C00A36EF3 /* MainPageViewController.m in Sources */,
 				845861E7268B61FA000E7D08 /* UILabel+KAutoLabelHeightAndWidth.m in Sources */,
 				8458634E268B6209000E7D08 /* KEmojiModel.m in Sources */,
 				845864D9268B6238000E7D08 /* KChatMessageHelper.m in Sources */,

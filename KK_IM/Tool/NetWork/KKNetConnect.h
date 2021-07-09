@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KKNetConnect : NSObject
 #pragma mark -方法
 //请求的URL
--(instancetype) initWithUrl:(NSString*)url;
+//-(instancetype) initWithUrl:(NSString*)url;
 
 //改变请求的URL
 -(void) changURL:(NSString*)newURL;
