@@ -1,5 +1,5 @@
 #import "MineController.h"
-
+#import "Masonry.h"
 @interface MineController()
 
 @end
@@ -9,23 +9,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    // 设置vc的背景颜色
+    
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    // 创建一个textLabel，控件左上角坐标为(50,50),width=300，height=50
-    UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 300, 50)];
-    // 设置textLabel控件的文字内容
-    [textLabel setText:@"MineView!"];
-    // 设置textLabel字体颜色
-    [textLabel setTextColor:[UIColor redColor]];
-    // 设置textLabel控件的边框，线条宽度、颜色
-    [textLabel.layer setBorderWidth:2];
-    [textLabel.layer setBorderColor:[[UIColor blackColor] CGColor]];
-    // 最后添加到vc的view中
-    [self.view addSubview:textLabel];
+    UIButton *logoutButton = [UIButton new];
+    
+    [logoutButton setTitle:@"logout" forState: UIControlStateNormal];
+    logoutButton.titleLabel.font = [UIFont systemFontOfSize:27];
+    [logoutButton setTitleColor:[UIColor systemBlueColor] forState:UIControlStateNormal];
+    
+    [self.view addSubview:logoutButton];
+    [logoutButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        //make.left.equalTo(self.view).offset(30);
+        //make.right.equalTo(self.view).offset(-30);
+        make.height.equalTo(@55);
+
+        make.center.equalTo(self.view);
+        //make.top.equalTo(self.view.mas_top).offset(96);
+    }];
+    
+    [logoutButton addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
+- (void) logout{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
     

@@ -127,8 +127,9 @@
     
     [self.backView addSubview:self.loginButton];
     [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.backView).offset(30);
-        make.right.equalTo(self.backView).offset(-30);
+        //make.left.equalTo(self.backView).offset(30);
+        //make.right.equalTo(self.backView).offset(-30);
+        make.centerX.equalTo(self.backView);
         make.top.equalTo(self.passwordField.mas_bottom).offset(40);
         make.height.equalTo(@55);
     }];

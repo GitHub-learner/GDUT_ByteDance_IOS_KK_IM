@@ -28,8 +28,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[LoginController new]];
-    self.window.rootViewController = navigationController;
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:[LoginController new]];
+    self.window.rootViewController = self.navigationController;
     // 显示window
     [self.window makeKeyAndVisible];
     return YES;
