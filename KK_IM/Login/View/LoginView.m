@@ -45,7 +45,8 @@
 //    [self.view insertSubview:imageView atIndex:0];
     
     self.backView = [[UIView alloc]init];
-    //    self.backView.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.1];
+    
+    self.backView.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
     [self addSubview:self.backView];
     [self.backView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
@@ -121,6 +122,7 @@
     }];
 
     self.loginButton = [[UIButton alloc]init];
+    
     [self.loginButton setTitle:@"登陆" forState: UIControlStateNormal];
     self.loginButton.titleLabel.font = [UIFont systemFontOfSize:27];
     [self.loginButton setTitleColor:[UIColor systemBlueColor] forState:UIControlStateNormal];
@@ -134,6 +136,30 @@
         make.height.equalTo(@55);
     }];
 
+#pragma mark - 动画
+    CGPoint accountCenter = self.usernameField.center;
+    CGPoint psdCenter = self.passwordField.center;
+    
+    accountCenter.x -=200;
+    psdCenter.x +=200;
+    self.usernameField.center = accountCenter;
+    self.passwordField.center = psdCenter;
+    
+    accountCenter.x +=200;
+    psdCenter.x -=200;
+    self.loginButton.alpha = 0.1;
+    self.titleLable.alpha = 0.1;
+
+    [UIView animateWithDuration:0.5 delay:0.35 options:UIViewAnimationCurveEaseInOut animations:^{
+        self.usernameField.center = accountCenter;
+        self.passwordField.center = psdCenter;
+        
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.titleLable.alpha = 1;
+            self.loginButton.alpha = 1;
+        }];
+    }];
     
 }
 

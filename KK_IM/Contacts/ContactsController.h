@@ -3,5 +3,6 @@
 @interface ContactsController : UIViewController
 
 
+- (void) loadURL:(NSString *)urlString;
 
 @end

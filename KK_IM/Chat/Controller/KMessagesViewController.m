@@ -233,6 +233,7 @@
 
 - (void)updateTitle {
     // 更新未读数量
+    _badgeNumber = 123;
     if (_badgeNumber)
     {
         self.navigationItem.title  = [NSString stringWithFormat:@"消息(%ld)", (long)_badgeNumber];
@@ -322,12 +323,12 @@
     [self.dataSource removeAllObjects];
     NSError *error = nil;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"conversationList" ofType:nil];
-    NSLog(@"path:%@", path);
+    //NSLog(@"path:%@", path);
     NSString *jsonStr = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
-    NSLog(@"jsonStr:%@", jsonStr);
+    //NSLog(@"jsonStr:%@", jsonStr);
     if (!error) {
         NSArray *messageList = [NSArray arrayWithJsonStr:jsonStr];
-        NSLog(@"messageList:%@", messageList);
+        //NSLog(@"messageList:%@", messageList);
         [messageList enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
             
             KConversationModel *model = [KConversationModel new];

@@ -115,10 +115,9 @@
     if([loginRes[@"result"] isEqual:@(YES) ]){
         NSLog(@"密码正确！");
         
-        MainTabBarController* mainTabBarController = [[MainTabBarController alloc]init];
         //AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
         //[appDelegate.navigationController pushViewController:mainTabBarController animated:YES];
-        [self.navigationController pushViewController:mainTabBarController animated:YES];
+        [self.navigationController pushViewController:[MainTabBarController new] animated:YES];
         
         //进入主页面之前，获取个人信息并归档。
         [conn changURL:@"https://qczgqv.fn.thelarkcloud.com/getUserInfo"];

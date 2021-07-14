@@ -12,6 +12,7 @@
 #import "LoginController.h"
 #import "HomeController.h"
 #import "MainTabBarController.h"
+#import "ContactsController.h"
 
 @interface AppDelegate ()
 //@property (nonatomic, strong) UINavigationController *navigationController;
@@ -28,7 +29,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:[LoginController new]];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:[ContactsController new]];
     self.window.rootViewController = self.navigationController;
     // 显示window
     [self.window makeKeyAndVisible];

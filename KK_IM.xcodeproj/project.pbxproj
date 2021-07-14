@@ -445,6 +445,7 @@
 		8458656C268B6BD9000E7D08 /* icon-tab我unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8458655A268B6BD9000E7D08 /* icon-tab我unselected@2x.png */; };
 		848CD6322697F73000B2A4A2 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848CD6312697F73000B2A4A2 /* HomeView.m */; };
 		848CD6BE26983AED00B2A4A2 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848CD6BD26983AED00B2A4A2 /* RegisterModel.m */; };
+		848CD6C5269E832000B2A4A2 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848CD6C4269E831F00B2A4A2 /* HistoryTableViewController.m */; };
 		84ECA265268C6F2C00A36EF3 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA25C268C6F2C00A36EF3 /* LoginController.m */; };
 		84ECA267268C6F2C00A36EF3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA25E268C6F2C00A36EF3 /* RegisterViewController.m */; };
 		84ECA268268C6F2C00A36EF3 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA263268C6F2C00A36EF3 /* UserInfoModel.m */; };
@@ -1001,6 +1002,8 @@
 		848CD6312697F73000B2A4A2 /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
 		848CD6BC26983AED00B2A4A2 /* RegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
 		848CD6BD26983AED00B2A4A2 /* RegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
+		848CD6C3269E831F00B2A4A2 /* HistoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		848CD6C4269E831F00B2A4A2 /* HistoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 		84ECA25C268C6F2C00A36EF3 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		84ECA25E268C6F2C00A36EF3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		84ECA260268C6F2C00A36EF3 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
@@ -1086,6 +1089,7 @@
 				84ECA25A268C6F2C00A36EF3 /* Register */,
 				848CD6282697F50A00B2A4A2 /* Chat */,
 				848CD6292697F55900B2A4A2 /* Mine */,
+				848CD6BF269DDC0200B2A4A2 /* Contacts */,
 				8458648D268B622D000E7D08 /* MessageIcon */,
 				845861F1268B6207000E7D08 /* InputBox */,
 				84586191268B61C7000E7D08 /* BAPhotoBrowser */,
@@ -1708,16 +1712,14 @@
 				84586504268B6265000E7D08 /* KSearchMessageViewController.m */,
 				84586505268B6265000E7D08 /* KChatViewController+Voice.m */,
 				84586508268B6265000E7D08 /* KChatViewController.h */,
-				8458650B268B6265000E7D08 /* ConversationsController.h */,
 				8458650C268B6265000E7D08 /* KMessagesViewController.h */,
-				8458650D268B6265000E7D08 /* ContactsController.h */,
 				8458650E268B6265000E7D08 /* KSearchMessageViewController.h */,
 				8458650F268B6265000E7D08 /* KChatViewController+Image.h */,
 				84586512268B6265000E7D08 /* KChatViewController+Voice.h */,
 				84586513268B6265000E7D08 /* KMessagesViewController.m */,
 				84586515268B6265000E7D08 /* ConversationsController.m */,
 				84586517268B6265000E7D08 /* KChatViewController.m */,
-				84586518268B6265000E7D08 /* ContactsController.m */,
+				8458650B268B6265000E7D08 /* ConversationsController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1870,6 +1872,17 @@
 				848CD6BD26983AED00B2A4A2 /* RegisterModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		848CD6BF269DDC0200B2A4A2 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				8458650D268B6265000E7D08 /* ContactsController.h */,
+				84586518268B6265000E7D08 /* ContactsController.m */,
+				848CD6C3269E831F00B2A4A2 /* HistoryTableViewController.h */,
+				848CD6C4269E831F00B2A4A2 /* HistoryTableViewController.m */,
+			);
+			path = Contacts;
 			sourceTree = "<group>";
 		};
 		84ECA25A268C6F2C00A36EF3 /* Register */ = {
@@ -2529,6 +2542,7 @@
 				845861F0268B61FA000E7D08 /* NSString+Size.m in Sources */,
 				84586350268B6209000E7D08 /* KInputBoxMoreModel.m in Sources */,
 				845864F8268B6256000E7D08 /* KChatMailTableViewCell.m in Sources */,
+				848CD6C5269E832000B2A4A2 /* HistoryTableViewController.m in Sources */,
 				8458651E268B6265000E7D08 /* MineController.m in Sources */,
 				845861BB268B61C7000E7D08 /* FSActionSheetCell.m in Sources */,
 				84ECA278268C70A300A36EF3 /* LoginView.m in Sources */,
